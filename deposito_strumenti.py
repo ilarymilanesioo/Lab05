@@ -1,6 +1,11 @@
+#contiene la logica di business principale
+#1 carica strumenti dal csv
+#2 aggiunge un nuovo strumento
+#3 ordina strumenti per marca
+#4 gestisce prestiti
+
 from strumento import Strumento
 from prestito import Prestito
-
 
 class DepositoStrumenti:
     def __init__(self, nome, responsabile):

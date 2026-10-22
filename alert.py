@@ -1,3 +1,5 @@
+#con questa classe ci permette di mostrare comodamente una finestra di dialogo
+
 import flet as ft
 
 class AlertManager:
