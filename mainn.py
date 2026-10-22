@@ -45,12 +45,12 @@ def main(page: ft.Page):
     #funzionamento del valore
     def decrementa_valore(e):
         valore=float(valore_strumento.value)
-        if valore>=10:
-           valore_strumento.value = str(valore - 10)
+        if valore>=0:
+           valore_strumento.value =valore - 10
            page.update()
     def incrementa_valore(e):
         valore = float(valore_strumento.value)
-        valore_strumento.value = str(valore + 10)
+        valore_strumento.value = valore + 10
         page.update()
 
     btn_meno = ft.IconButton(icon=ft.Icons.REMOVE,on_click=decrementa_valore)
@@ -73,6 +73,7 @@ def main(page: ft.Page):
         deposito.set_responsabile(input_responsabile.value)
         txt_responsabile.value = f"Responsabile: {deposito.get_responsabile()}"
 
+    #AGGIUNTO DA ME
     # Handlers per la gestione dei pulsanti utili all'inserimento di un nuovo strumento
     def aggiungi_nuovo_strumento(e):
         try:
