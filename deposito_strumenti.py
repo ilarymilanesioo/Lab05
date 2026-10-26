@@ -12,9 +12,9 @@ class DepositoStrumenti:
         """Inizializza gli attributi e le strutture dati"""
         self.nome = nome
         self.responsabile = responsabile
-        self.strumenti = []
-        self.prestiti = []
-        self._prossimo_numero_prestito = 1
+        self.strumenti = [] #lista che terrà tutti oggetti strumento caricati o aggiunti
+        self.prestiti = [] #lista che terrà traccia prestiti attivi
+        self._prossimo_numero_prestito = 1 #contatore interno
 
     def get_responsabile(self):
         return self.responsabile
@@ -39,6 +39,7 @@ class DepositoStrumenti:
             anno_acquisto = int(campi[3].strip())
             valore = float(campi[4].strip())
 
+            #crea l'oggetto strumento e lo aggiunge alla lista
             strumento = Strumento(codice, tipo, marca, anno_acquisto, valore)
             self.strumenti.append(strumento)
 
